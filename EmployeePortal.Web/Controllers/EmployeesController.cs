@@ -21,7 +21,10 @@ namespace EmployeePortal.Web.Controllers
         public IActionResult Details(int id)
         {
             var model = db.GetById(id);
-            return View(model);
+            if(model == null)
+                return View("NotFound");
+            else
+                return View(model);
         }
     }
 }
