@@ -29,5 +29,10 @@ namespace EmployeePortal.Data
                    orderby e.Name
                    select e;
         }
+
+        public Employee GetById(int id)
+        {
+            return employees.FirstOrDefault(e => e.Id == id);
+        }
     }
 }

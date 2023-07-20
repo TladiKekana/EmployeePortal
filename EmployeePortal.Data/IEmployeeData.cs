@@ -10,5 +10,6 @@ namespace EmployeePortal.Data
     public interface IEmployeeData
     {
         IEnumerable<Employee> GetAll();
+        Employee GetById(int id);
     }
 }

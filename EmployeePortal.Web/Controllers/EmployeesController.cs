@@ -17,5 +17,11 @@ namespace EmployeePortal.Web.Controllers
             var model = db.GetAll();
             return View(model);
         }
+
+        public IActionResult Details(int id)
+        {
+            var model = db.GetById(id);
+            return View(model);
+        }
     }
 }
