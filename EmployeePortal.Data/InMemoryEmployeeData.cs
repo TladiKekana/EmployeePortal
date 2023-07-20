@@ -22,6 +22,12 @@ namespace EmployeePortal.Data
             };
         }
 
+        public void Add(Employee employee)
+        {
+            employees.Add(employee);
+            employee.Id = employees.Max(e => e.Id) + 1;
+        }
+
         public IEnumerable<Employee> GetAll()
         {
             //Arrange employee list by name in assending order
